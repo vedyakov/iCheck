@@ -116,21 +116,6 @@
           id = node.id,
 
           // Layer styles
-          offset = -area + '%',
-          size = 100 + (area * 2) + '%',
-          layer = {
-            position: 'absolute',
-            top: offset,
-            left: offset,
-            display: 'block',
-            width: size,
-            height: size,
-            margin: 0,
-            padding: 0,
-            background: '#fff',
-            border: 0,
-            opacity: 0
-          },
 
           // Choose how to hide input
           hide = _mobile ? {
@@ -177,7 +162,7 @@
         parent = self.wrap(parent + '/>')[_callback]('ifCreated').parent().append(settings.insert);
 
         // Layer addition
-        helper = $('<ins class="' + _iCheckHelper + '"/>').css(layer).appendTo(parent);
+        helper = $('<ins class="' + _iCheckHelper + '"/>').appendTo(parent);
 
         // Finalize customization
         self.data(_iCheck, {o: settings, s: self.attr('style')}).css(hide);
